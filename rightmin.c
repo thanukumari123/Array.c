@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main() {
+    int size,i;
+    printf("Enter the size of the array:");
+    scanf("%d",&size);
+    int a[size];
+    for(i=0;i<size;i++)
+    {
+    printf("Enter the %d value:\n",i+1);
+    scanf("%d",&a[i]); 
+    }
+    int min=a[0];
+    int index=0;
+    for(i=1;i<size;i++)
+    {
+        if(a[i]<min)
+        {
+            min=a[i];
+            index=i;
+        }
+    }
+    for(i=index+1;i<size;i++)
+    {
+        printf("%d\n",a[i]);
+    }
+    return 0;
+}
